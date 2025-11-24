@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wellbeing Quest — Mental Health Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Wellbeing Quest</h1>
+    <p class="subtitle">Collect self-care items 💚 — avoid stressors ⚫</p>
+  </header>
+
+  <main class="wrap">
+    <section class="hud">
+      <div class="hud-row">
+        <div class="meter-label">Wellbeing</div>
+        <div id="wellbeing-bar" class="meter"><div id="wellbeing-fill"></div></div>
+      </div>
+
+      <div class="hud-row small">
+        <div>Score: <span id="score">0</span></div>
+        <div>Time: <span id="time">60</span>s</div>
+        <div id="message" aria-live="polite">Collect hearts to build wellbeing!</div>
+      </div>
+    </section>
+
+    <section class="game-area" id="gameArea" tabindex="0" aria-label="Game area">
+      <!-- Canvas-like area is managed with absolutely positioned elements -->
+    </section>
+
+    <section class="controls">
+      <button id="startBtn" class="btn">Start Game</button>
+      <button id="pauseBtn" class="btn" disabled>Pause</button>
+      <button id="resetBtn" class="btn" disabled>Reset</button>
+    </section>
+
+    <section class="legend">
+      <div><span class="chip heart">💚</span> Self-care ( + wellbeing )</div>
+      <div><span class="chip rock">⚫</span> Stressor ( - wellbeing )</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Year 9 Health Promotion — suitable for Year 7s • Not a substitute for professional help</small>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
